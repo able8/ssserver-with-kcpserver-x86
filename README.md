@@ -1,7 +1,7 @@
 # ssserver-with-kcpserver-x86
 Docker image of shadowsocks server with kcptun server, built on x86 64-bits.
 
-It start a ss server and a kcp server according to `/dorry_data/ss-kcp/config.json`.
+It start a ss server and a kcp server according to `/dorry_data/ss-kcp/shadowsocks.json` and `/dorry_data/ss-kcp/kcp.json`.
 
 ## Version
   - shadowsocks 2.5.6
