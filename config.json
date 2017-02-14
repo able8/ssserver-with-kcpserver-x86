@@ -1,0 +1,17 @@
+{
+	"ss":{
+		"port": "8388",
+		"address": "0.0.0.0",
+		"method": "aes-256-cfb",
+		"password":"testss",
+		"timeout":"600"
+	},
+	"kcp":{
+		"port": "4000",
+		"server_address": "123.123.123.123",
+		"server_port": "8388",
+		"password": "testkcp",
+		"mode": "manual",
+		"others": "--sndwnd 2048 --rcvwnd 4096 -crypt aes-128 -nodelay 0 -resend 0 -nc 1 -interval 40 -datashard 5 -parityshard 2"
+	}
+}

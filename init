@@ -1,0 +1,30 @@
+#!/usr/bin/python
+import json
+from subprocess import call
+import shlex
+import os.path
+
+path = "/home/"
+config_file = path + "config.json"
+
+def init(_file):
+    if os.path.isfile(_file):
+        config = json.loads(open(_file).read())
+        ss_config = config["ss"]
+        kcp_config = config["kcp"]
+        
+        # generate commands
+        ss_command = "ss-server -s " + ss_config["address"] + " -p " + ss_config["port"] + " -m " + ss_config["method"] + " -k " + ss_config["password"] + " -t " + ss_config["timeout"] + " --fast-open &"
+        kcp_command = "server_linux_amd64 -t " + kcp_config["server_address"] + ":" + kcp_config["server_port"] + " -l :" + kcp_config["port"] + " -mode " + kcp_config["mode"] + " -key " + kcp_config["password"]
+        
+        # run ssserver
+        # TODO
+        call(ss_command, shell=True)
+
+        # run kcpserver
+        # TODO
+        call(shlex.split(kcp_command))
+    else:
+        print "config file not found!"
+
+init(config_file)
