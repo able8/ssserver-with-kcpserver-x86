@@ -1,6 +1,6 @@
 FROM alpine:3.4
 
-ENV KCP_VER 20170303
+ENV KCP_VER 20170315
 ENV KCP_URL https://github.com/xtaci/kcptun/releases/download/v$KCP_VER/kcptun-linux-amd64-$KCP_VER.tar.gz
 
 ENV SS_VER 3.0.3
