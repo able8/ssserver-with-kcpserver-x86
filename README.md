@@ -5,9 +5,9 @@ It start a ss server and a kcp server according to `/dorry_data/ss-kcp/shadowsoc
 
 ## Version
   - shadowsocks 3.0.3
-  - kcptun 20170315
+  - kcptun 20170322
 
 ### Usage
 ```
-docker run -itd --cap-add=NET_ADMIN --network=host --restart=always --privileged -v /dorry_data/ss-kcp/:/home/ --name=ss-kcp-server dorrypizza/ss-kcp-server:0.3.0
+docker run -itd --cap-add=NET_ADMIN --network=host --restart=always --privileged -v /dorry_data/ss-kcp/:/home/ --name=ss-kcp-server dorrypizza/ss-kcp-server:0.4.0
 ```
