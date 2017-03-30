@@ -6,8 +6,6 @@ ENV KCP_URL https://github.com/xtaci/kcptun/releases/download/v$KCP_VER/kcptun-l
 ENV SS_VER 3.0.3
 ENV SS_URL https://github.com/shadowsocks/shadowsocks-libev/releases/download/v$SS_VER/shadowsocks-libev-$SS_VER.tar.gz 
 
-RUN echo "http://dl-4.alpinelinux.org/alpine/v3.4/community" >> /etc/apk/repositories && \
-    echo "http://dl-cdn.alpinelinux.org/alpine/v3.4/main" >> /etc/apk/repositories
 
 RUN apk update && \
     apk upgrade && \
