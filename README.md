@@ -9,5 +9,5 @@ It start a ss server and a kcp server according to `/dorry_data/sskcp_conf/shado
 
 ### Usage
 ```
-docker run -itd --cap-add=NET_ADMIN --network=host --restart=always --privileged -v /dorry_data/sskcp_conf/:/home/ --name=ss-kcp-server dorrychocolate/ss-kcp-server:test
+docker run -itd --cap-add=NET_ADMIN --network=host --restart=always --privileged -v /dorry_data/sskcp_conf/:/home/ --name=ss-kcp-server dorrychocolate/ssserver-kcpserver-x86:test
 ```
